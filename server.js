@@ -2,6 +2,7 @@ const express = require('express')
 const axios = require('axios');
 
 const app = express()
+const PORT = process.env.PORT || 3000;
 
 
 app.get('/:formId/filteredResponses', (req, res) => {
@@ -34,6 +35,6 @@ app.get('/:formId/filteredResponses', (req, res) => {
     }
 });
 
-app.listen(3000, ()=>{
+app.listen(PORT, ()=>{
     console.log('Node API is runing on port http://localhost:3000');
 })
